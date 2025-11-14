@@ -353,4 +353,3 @@ async def stop_error(ctx, error):
     print(f"[!] Stop command error: {error}")
 
 bot.run(TOKEN)
-

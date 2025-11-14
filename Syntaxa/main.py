@@ -10,8 +10,7 @@ for logger_name in ["discord", "discord.gateway", "discord.client", "discord.htt
     logging.getLogger(logger_name).setLevel(logging.CRITICAL)
 logging.basicConfig(level=logging.CRITICAL)
 
-load_dotenv()
-TOKEN = os.getenv("DISCORD_TOKEN")
+TOKEN = input("Enter your Discord bot token: ")
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -354,3 +353,4 @@ async def stop_error(ctx, error):
     print(f"[!] Stop command error: {error}")
 
 bot.run(TOKEN)
+
